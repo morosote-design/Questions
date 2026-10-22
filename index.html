@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Grammar: "How..." Questions Course</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@500;700&family=Noto+Sans+SC:wght@500;700&family=Noto+Sans+JP:wght@500;700&family=Noto+Sans+Malayalam:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- PANTALLA 1: SELECCIÓN DE IDIOMA (Exacta a la imagen) -->
+  <section id="screen-language" class="screen-lang active">
+    <div class="lang-container">
+      <h2 class="lang-prompt">Selecciona tu idioma para ver explicaciones y correcciones:</h2>
+      
+      <div class="lang-grid">
+        <!-- ES -->
+        <button class="lang-card" onclick="selectLanguage('es')">
+          <div class="lang-code">ES</div>
+          <div class="lang-name">Español</div>
+          <div class="lang-sub">Recomendado</div>
+        </button>
+
+        <!-- US -->
+        <button class="lang-card" onclick="selectLanguage('en')">
+          <div class="lang-code">US</div>
+          <div class="lang-name">English</div>
+          <div class="lang-sub">English</div>
+        </button>
+
+        <!-- BR -->
+        <button class="lang-card" onclick="selectLanguage('pt')">
+          <div class="lang-code">BR</div>
+          <div class="lang-name">Português</div>
+          <div class="lang-sub">Brasil</div>
+        </button>
+
+        <!-- KR -->
+        <button class="lang-card font-kr" onclick="selectLanguage('ko')">
+          <div class="lang-code">KR</div>
+          <div class="lang-name">한국어</div>
+          <div class="lang-sub">Korean</div>
+        </button>
+
+        <!-- CN -->
+        <button class="lang-card font-cn" onclick="selectLanguage('zh')">
+          <div class="lang-code">CN</div>
+          <div class="lang-name">中文</div>
+          <div class="lang-sub">Mandarin</div>
+        </button>
+
+        <!-- JP -->
+        <button class="lang-card font-jp" onclick="selectLanguage('ja')">
+          <div class="lang-code">JP</div>
+          <div class="lang-name">日本語</div>
+          <div class="lang-sub">Japanese</div>
+        </button>
+
+        <!-- IN -->
+        <button class="lang-card font-ml" onclick="selectLanguage('ml')">
+          <div class="lang-code">IN</div>
+          <div class="lang-name">മലയാളം</div>
+          <div class="lang-sub">Malayalam</div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PANTALLA 2: CONTENEDOR PRINCIPAL DEL CURSO -->
+  <div id="screen-course" class="screen-course" style="display: none;">
+    <header class="course-header">
+      <div class="nav-wrap">
+        <div class="brand">
+          <span class="badge-tag">HOW...?</span>
+          <span class="course-title" id="t-header-title">Curso de Inglés</span>
+        </div>
+        <div class="header-actions">
+          <nav class="course-tabs">
+            <button class="tab-btn active" onclick="switchTab('theory')" id="t-tab-theory">📚 Teoría</button>
+            <button class="tab-btn" onclick="switchTab('exercises')" id="t-tab-exercises">✍️ Ejercicios (20)</button>
+            <button class="tab-btn" onclick="switchTab('test')" id="t-tab-test">🏆 Test Evaluativo</button>
+          </nav>
+          <button class="lang-change-btn" onclick="changeLangScreen()" title="Cambiar idioma">🌐 <span id="current-lang-code">ES</span></button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <!-- VISTA: TEORÍA -->
+      <section id="view-theory" class="tab-view active">
+        <div class="hero-banner">
+          <h1 id="t-hero-title">Curso completo: Las preguntas con "How..."</h1>
+          <p id="t-hero-sub">Aprende a preguntar por cantidad, distancia, duración, altura, frecuencia, edad, velocidad y dimensiones.</p>
+        </div>
+
+        <!-- Tabla resumen -->
+        <div class="card">
+          <h2 id="t-sec1-title">1. Resumen de Expresiones</h2>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Expresión</th>
+                  <th id="t-th-meaning">¿Qué pregunta?</th>
+                  <th id="t-th-example">Ejemplo y Traducción</th>
+                </tr>
+              </thead>
+              <tbody id="table-summary-body">
+                <!-- Inyectado por JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Estructuras gramaticales -->
+        <div class="card">
+          <h2 id="t-sec2-title">2. Cómo construir la pregunta</h2>
+          <p id="t-sec2-desc">La estructura básica depende del tipo de verbo que utilices en la oración:</p>
+
+          <div class="structure-box">
+            <h3>Con verbo <em>to be</em> (am, is, are, was, were)</h3>
+            <code>How + adjetivo/adverbio + am/is/are + sujeto?</code>
+            <p><strong>Ejemplo:</strong> <em>How old are you?</em> / <em>How tall is she?</em></p>
+          </div>
+
+          <div class="structure-box">
+            <h3>Con verbos de acción auxiliares (do / does / did)</h3>
+            <code>How + adjetivo/adverbio + do/does/did + sujeto + verbo base?</code>
+            <p><strong>Ejemplo:</strong> <em>How often do you study?</em> / <em>How much does it cost?</em></p>
+          </div>
+
+          <div class="structure-box">
+            <h3>Con verbos modales (can, could, will, should)</h3>
+            <code>How + adjetivo/adverbio + modal + sujeto + verbo base?</code>
+            <p><strong>Ejemplo:</strong> <em>How fast can you run?</em> / <em>How far should we walk?</em></p>
+          </div>
+        </div>
+
+        <!-- Explicaciones detalladas de cada lección -->
+        <div id="lessons-detail-container">
+          <!-- Renderizado dinámicamente -->
+        </div>
+
+        <!-- Errores Comunes -->
+        <div class="card">
+          <h2 id="t-sec-errors-title">Errores comunes que debes evitar</h2>
+          <div class="table-responsive">
+            <table class="data-table error-table">
+              <thead>
+                <tr>
+                  <th>Incorrecto ❌</th>
+                  <th>Correcto ✅</th>
+                  <th id="t-th-reason">Razón / Explicación</th>
+                </tr>
+              </thead>
+              <tbody id="table-errors-body">
+                <!-- Inyectado por JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- VISTA: EJERCICIOS -->
+      <section id="view-exercises" class="tab-view">
+        <div class="card">
+          <div class="exercise-header">
+            <div>
+              <h2 id="t-ex-title">Práctica interactiva</h2>
+              <p id="t-ex-subtitle">Completa cada espacio en blanco con la expresión adecuada (ejemplo: <em>How much</em>, <em>How many</em>, etc.).</p>
+            </div>
+            <div class="exercise-actions">
+              <button class="btn btn-primary" onclick="checkAllExercises()" id="t-btn-check-all">Comprobar Todo</button>
+              <button class="btn btn-secondary" onclick="resetExercises()" id="t-btn-reset">Reiniciar</button>
+            </div>
+          </div>
+
+          <div id="exercise-score-box" class="score-alert" style="display: none;"></div>
+
+          <div id="exercises-list" class="exercises-container">
+            <!-- Renderizado desde exercises.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- VISTA: TEST EVALUATIVO -->
+      <section id="view-test" class="tab-view">
+        <div class="card">
+          <div class="test-header">
+            <div>
+              <h2 id="t-test-title">Evaluación Final: Dominio de "How..."</h2>
+              <p id="t-test-sub">10 preguntas de opción múltiple con situaciones reales. ¡Demuestra lo aprendido!</p>
+            </div>
+            <div class="test-timer" id="test-timer-badge">⏱️ Modo Examen</div>
+          </div>
+
+          <div id="test-questions-list" class="test-container">
+            <!-- Renderizado desde test.js -->
+          </div>
+
+          <div class="test-footer-actions">
+            <button class="btn btn-primary btn-large" onclick="submitTest()" id="t-btn-submit-test">Entregar y Calificar Test</button>
+          </div>
+
+          <div id="test-results-panel" class="results-card" style="display:none;">
+            <!-- Resultados inyectados por test.js -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p id="t-footer-text">English Practical Course · Disponible offline · Código abierto para GitHub Pages</p>
+    </footer>
+  </div>
+
+  <!-- Scripts modulares -->
+  <script src="js/translations.js"></script>
+  <script src="js/exercises.js"></script>
+  <script src="js/test.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
